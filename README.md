@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://vla-precision.github.io/"><img src="https://img.shields.io/badge/Project-Website-blue" alt="Project Website"></a>
-  <a href="https://github.com/scy-v/vla-precision"><img src="https://img.shields.io/static/v1?label=Paper&message=Repository&color=red&logo=arxiv" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2609.04355"><img src="https://img.shields.io/static/v1?label=Paper&message=arXiv&color=red&logo=arxiv" alt="Paper"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-green" alt="Apache-2.0 License"></a>
 </p>
 
@@ -221,11 +221,11 @@ VLA-Precision can be adapted to new robots, cameras, grippers, teleoperation dev
 ## 📝 6. Citation
 
 ```bibtex
-@article{vla_precision,
+@article{su2026vlaprecision,
   title   = {VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models},
-  author  = {},
-  journal = {},
-  year    = {},
-  url     = {}
+  author  = {Su, Chenyu and Shen, Zhaolong and Qian, Yuan and Qian, Chen and Zhang, Rui and Yan, Feng and Chen, Weixing and Zhang, Fei and Wang, Jiamin and Cong, Shuang and Shang, Weiwei},
+  journal = {arXiv preprint arXiv:2609.04355},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2609.04355}
 }
 ```
