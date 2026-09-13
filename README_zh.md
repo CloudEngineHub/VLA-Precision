@@ -14,6 +14,12 @@
   <img src="assets/workflow_zh-CN.svg" alt="从遥操作、监督微调、在线 RL 后训练到真机部署" width="100%">
 </p>
 
+## 🔥 最新动态
+
+- **[2026-09-11]** 🎉 我们很高兴获得具身智能之心和 Lumina 具身智能社区的报道——欢迎查看[微信公众号文章](https://mp.weixin.qq.com/s/5vG4IdmM1Y3VXPlnW2IoYQ)和[小红书文章](https://xhslink.cn/o/39J8ayAxHbv)！
+- **[2026-09-07]** 🎬 我们感谢具身智能之心在[微信视频号](https://weixin.qq.com/sph/ALs31S3C2A)和[哔哩哔哩](https://b23.tv/tHhPOAi)对我们的报道！
+- **[2026-09-06]** 🚀 我们很高兴正式发布 VLA-Precision 论文及完整代码！
+
 ## 🎮 1. 遥操作与数据采集
 
 可使用以下项目采集 LeRobot 格式的示范数据：
