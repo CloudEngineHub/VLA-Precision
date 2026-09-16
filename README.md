@@ -16,6 +16,7 @@
 
 ## 🔥 News
 
+- **[2026-09-14]** 🎉 We appreciate human five (AI椰青) covering our work—read the [WeChat article](https://mp.weixin.qq.com/s/VAub4PM32942VVtihczFkg)!
 - **[2026-09-11]** 🎉 We are thrilled that Heart Of Embodied AI (具身智能之心) and Lumina Embodied AI Community (Lumina 具身智能社区) featured our work—check out the [WeChat article](https://mp.weixin.qq.com/s/5vG4IdmM1Y3VXPlnW2IoYQ) and [Xiaohongshu post](https://xhslink.cn/o/39J8ayAxHbv)!
 - **[2026-09-07]** 🎬 We thank Heart Of Embodied AI for featuring our work on [WeChat Channels](https://weixin.qq.com/sph/ALs31S3C2A) and [Bilibili](https://b23.tv/tHhPOAi)!
 - **[2026-09-06]** 🚀 We are excited to release our paper together with the full VLA-Precision codebase!
