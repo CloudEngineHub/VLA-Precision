@@ -2,7 +2,7 @@
 schema_version: 1
 
 # Shared: Enables concise startup diagnostics without changing training behavior.
-debug: True
+debug: False
 
 # Shared: True requires byte-identical Python sources on distributed processes.
 # False still checks the shared algorithm config, protocol, and OpenPI commit.

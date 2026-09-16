@@ -220,8 +220,8 @@ class Stage1DataConfig:
     state_indices: tuple[int, ...] = ()
     action_key: str = "action"
     action_indices: tuple[int, ...] = ()
-    extra_delta_transform: bool = False
-    prompt_from_task: bool = True
+    extra_delta_transform: bool = True
+    prompt_from_task: bool = False
     image_key_map: dict[str, str] = field(default_factory=dict)
 
 
@@ -241,10 +241,10 @@ class OpenPIModelOverrides:
 
 @dataclass(frozen=True)
 class OpenPILRScheduleConfig:
-    warmup_steps: int = 10_000
-    peak_lr: float = 5.0e-5
-    decay_steps: int = 1_000_000
-    decay_lr: float = 5.0e-5
+    warmup_steps: int = 1_000
+    peak_lr: float = 2.5e-5
+    decay_steps: int = 30_000
+    decay_lr: float = 2.5e-6
 
 
 @dataclass(frozen=True)
@@ -262,18 +262,18 @@ class Stage1OpenPIConfig:
     exp_name: str = "experiment"
     initialization_checkpoint: str = "gs://openpi-assets/checkpoints/pi05_base/params"
     model: OpenPIModelOverrides = field(default_factory=OpenPIModelOverrides)
-    batch_size: int = 64
+    batch_size: int = 32
     num_train_steps: int = 30_000
     resume: bool = False
     overwrite: bool = False
     fsdp_devices: int = 1
-    project_name: str = "vla-precision"
+    project_name: str = "openpi"
     num_workers: int = 2
     lr_schedule: OpenPILRScheduleConfig = field(default_factory=OpenPILRScheduleConfig)
     optimizer: OpenPIOptimizerConfig = field(default_factory=OpenPIOptimizerConfig)
-    ema_decay: float | None = 0.999
+    ema_decay: float | None = 0.99
     log_interval: int = 100
-    save_interval: int = 10_000
+    save_interval: int = 1_000
     keep_period: int | None = 5_000
     wandb_enabled: bool = True
     seed: int = 42
@@ -281,7 +281,7 @@ class Stage1OpenPIConfig:
 
 @dataclass(frozen=True)
 class Stage1PathConfig:
-    checkpoint_root: str = "./checkpoints/stage1"
+    checkpoint_root: str = "./checkpoints"
     cache_root: str = "./.cache"
     openpi_assets_root: str = "./assets"
 
