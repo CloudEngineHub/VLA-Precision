@@ -61,8 +61,11 @@ def checkpoint_layout(config: RootConfig) -> CheckpointLayout:
 
 
 def ensure_layout(layout: CheckpointLayout) -> None:
+    # Do not create ``layout.actor`` here. OpenPI deliberately treats any
+    # pre-existing checkpoint directory, even an empty one, as a fresh-run
+    # collision when both overwrite and resume are false. Its checkpoint
+    # manager owns creation of the actor directory.
     for path in (
-        layout.actor,
         layout.critic,
         layout.replay_transitions,
         layout.correction_transitions,
@@ -98,6 +101,11 @@ def prepare_fresh_run_layout(config: RootConfig, layout: CheckpointLayout) -> No
     if config.checkpoint.resume:
         return
     ensure_fresh_layout(layout, overwrite=config.checkpoint.overwrite)
+    # A failed start from an older version may have left an empty actor tree.
+    # ``ensure_fresh_layout`` above guarantees that it contains no files or
+    # symlinks, so removing it cannot discard a checkpoint.
+    if layout.actor.exists():
+        shutil.rmtree(layout.actor)
     ensure_layout(layout)
 
 

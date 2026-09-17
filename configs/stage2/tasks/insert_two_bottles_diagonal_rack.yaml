@@ -229,7 +229,7 @@ checkpoint:
   # Preserve checkpoints at this period while pruning intermediate saves.
   keep_period: 250
   # Restore an existing synchronized Stage-II run when true.
-  resume: true
+  resume: false
   overwrite: false
   # Exact Stage-II step to restore; 0 selects the latest synchronized step.
   resume_step: 0
